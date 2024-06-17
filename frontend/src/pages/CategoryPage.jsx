@@ -1,10 +1,13 @@
-import { useState } from "react";
-import categoryPageStyles from "../styles/categoryPage.module.css";
 import axios from "axios";
-import { ALL_LEVELS, ALL_TOPICS } from "../constants/categories";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { DEV_URL } from "../api";
+import { ALL_LEVELS, ALL_TOPICS } from "../constants/categories";
+import { useAccess } from "../context/AccessContext";
+import categoryPageStyles from "../styles/categoryPage.module.css";
+
 function CategoryPage() {
+  const { setAccessGranted } = useAccess();
   const [topic, setTopic] = useState(ALL_TOPICS[0]);
   const [difficulty, setDifficulty] = useState(ALL_LEVELS[0]);
 
@@ -17,6 +20,8 @@ function CategoryPage() {
   }
 
   const sendCategoryToBackend = async () => {
+    setAccessGranted(true);
+
     const data = {
       topic: topic.name,
       difficulty: difficulty.name.toLowerCase(),
