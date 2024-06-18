@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as ErrorImage } from "../assets/404 error lost in space-rafiki.svg";
+import { ReactComponent as ErrorImage } from "../assets/qnAceError404.svg";
 import errorStyles from "../styles/error.module.css";
 
 export default function ErrorPage() {
