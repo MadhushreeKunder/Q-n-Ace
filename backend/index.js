@@ -7,7 +7,7 @@ const corsOptions = {
   origin: [
     "https://q-n-ace.vercel.app",
     "http://localhost:3000",
-    "https://q-n-ace.onslate.in/",
+    "https://q-n-ace.onslate.in",
   ],
   credentials: true,
   optionSuccessStatus: 200,
