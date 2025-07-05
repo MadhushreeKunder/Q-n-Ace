@@ -4,7 +4,11 @@ const chatRoute = require("./server.js");
 const cors = require("cors");
 
 const corsOptions = {
-  origin: ["https://q-n-ace.vercel.app", "http://localhost:3000"],
+  origin: [
+    "https://q-n-ace.vercel.app",
+    "http://localhost:3000",
+    "https://q-n-ace.onslate.in/",
+  ],
   credentials: true,
   optionSuccessStatus: 200,
 };
